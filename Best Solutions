@@ -1,0 +1,35 @@
+module look_again
+import StdEnv
+
+
+/* 4. 
+Change a character if is small letter to uppercase and vice versa,
+if is a special sign, leave as it is.
+*/
+
+//version 2.
+ch2 :: Char -> Char
+ch2 c
+| isUpper c = toLower c
+| isLower c = toUpper c
+=c
+
+//Start = (ch2 'a', ch2 'z', ch2 'A', ch2 'Z', ch2 'x', ch2 '%')
+
+
+
+/* 5.
+Is a number perfect square?
+16 is the square of 4, so is perfect square.
+*/
+
+isPerfectSquare :: Int -> Bool
+isPerfectSquare n = n == x*x
+where x = toInt( sqrt (toReal n))
+
+//Start = isPerfectSquare 9 // True
+//Start = isPerfectSquare 1 // True
+//Start = isPerfectSquare 0 // True
+//Start = isPerfectSquare 10 // False
+//Start = isPerfectSquare 17 // False
+//Start = isPerfectSquare -1 // False
