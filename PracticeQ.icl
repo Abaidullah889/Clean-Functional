@@ -1,4 +1,4 @@
-module ex2
+module PracticeQ
 
 import StdEnv 
 
@@ -85,12 +85,14 @@ ch a
 
 //version 2.
 ch2 :: Char -> Char
-ch2 a 
-| toInt(a) >= 65 && toInt(a) <= 90 = toLower(a)
-| toInt(a) >= 97 && toInt(a) <= 122 = toUpper(a)
-= a
+ch2 c
+| isUpper c = toLower c
+| isLower c = toUpper c
+=c
 
-//Start = (ch2 'a', ch2 'z', ch2 'A', ch2 'Z', ch2 'x', ch2 '%')
+
+
+Start = (ch2 'a', ch2 'z', ch2 'A', ch2 'Z', ch2 'x', ch2 '%')
 
 
 
@@ -99,11 +101,14 @@ ch2 a
 //16 is the square of 4, so is perfect square.
 
 
-isPerfectSquare :: Int -> Bool
-isPerfectSquare x 
+isPerfectSquare1 :: Int -> Bool
+isPerfectSquare1 x 
 | toInt (sqrt (toReal x)) * toInt (sqrt (toReal x)) == x = True
 = False
 
+isPerfectSquare :: Int -> Bool
+isPerfectSquare n = n == x*x
+where x = toInt( sqrt (toReal n))
 
 
 //Start = isPerfectSquare 9 // True
@@ -196,4 +201,4 @@ transform x = toString (x / 365)+++" year "+++toString((x rem 365)/ 7)+++" Week 
 //Start = transform 375 // "1 year 1 week 3 days"
 //Start = transform 365 // "1 year 0 week 0 days"
 //Start = transform 1050 // "2 year 45 week 5 days"
-Start = transform 2500 // "6 year 44 week 2 days"
+//Start = transform 2500 // "6 year 44 week 2 days"
