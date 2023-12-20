@@ -1,0 +1,12 @@
+Version: 1.5
+MainModule
+	Name:	example
+	Dir:	{Project}
+	DclOpen:	False
+	Icl
+		WindowPosition
+			X:	-183
+			Y:	64
+			SizeX:	749
+			SizeY:	721
+	IclOpen:	False

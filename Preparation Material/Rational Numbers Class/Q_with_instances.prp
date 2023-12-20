@@ -1,0 +1,12 @@
+Version: 1.5
+MainModule
+	Name:	Q_with_instances
+	Dir:	{Project}
+	DclOpen:	False
+	Icl
+		WindowPosition
+			X:	-8
+			Y:	-31
+			SizeX:	749
+			SizeY:	721
+	IclOpen:	True
